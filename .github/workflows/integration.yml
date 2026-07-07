@@ -30,8 +30,8 @@ jobs:
       - name: Run tests
         id: test
         run: |
-        mkdir -p tests-results
-        PYTHONPATH=src pytest unit_tests/ --capture=tee-sys --cov=model --cov=evaluate --cov=data_loader --cov-report=term --cov-report=html --junitxml=test-results/results.xml > test-results/results.log
+          mkdir -p tests-results
+          PYTHONPATH=src pytest unit_tests/ --capture=tee-sys --cov=model --cov=evaluate --cov=data_loader --cov-report=term --cov-report=html --junitxml=test-results/results.xml > test-results/results.log
         
       - name: Comnentar resultados en PR
         uses: actions/github-script@v7
