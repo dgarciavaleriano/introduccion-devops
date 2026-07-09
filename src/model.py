@@ -3,6 +3,7 @@ import logging
 
 logger=logging.getLogger("adult-income")
 
+
 def train_model(X_train, y_train):
     logger.info("Training RandomForestClassifier...")
     model = RandomForestClassifier(random_state=42)
